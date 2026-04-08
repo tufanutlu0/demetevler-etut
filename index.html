@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demetevler Etüt Merkezi | Yıldız Kurs Ödev Takip ve Etüt Sistemi</title>
+<meta name="description" content="Demetevler etüt merkezi arayanlar için Yıldız Kurs etüt ve ödev takip sistemi. Demetevler en iyi etüt merkezi fiyatları, ortaokul etüt programları ve sınavlara hazırlık desteği. Hemen bilgi alın!">
+<meta name="keywords" content="Demetevler etüt merkezi, Demetevler etüt merkezleri, Demetevler etüt merkezi fiyatları, Demetevler en iyi etüt merkezi, Demetevler etüt merkezi tavsiye, Demetevler ortaokul etüt merkezi, Demetevler ödev takip merkezi, Yıldız Kurs Demetevler etüt sistemi">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Yıldız Kurs Etüt Merkezi">
+<meta name="geo.region" content="TR-06">
+<meta name="geo.placename" content="Yenimahalle, Ankara">
+<link rel="canonical" href="https://demetevleretutmerkezi.com.tr/">
+<meta property="og:title" content="Demetevler Etüt Merkezi | Yıldız Kurs Ödev Takip Sistemi">
+<meta property="og:description" content="Demetevler en iyi etüt merkezi: Yıldız Kurs ile çocuğunuzun ödevleri takip altında, sınavlara hazırlık güvencede. Ücretsiz danışmanlık için hemen arayın.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://demetevleretutmerkezi.com.tr/">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Yıldız Kurs Etüt Merkezi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Demetevler Etüt Merkezi | Yıldız Kurs Ödev Takip Sistemi">
+<meta name="twitter:description" content="Demetevler en iyi etüt merkezi Yıldız Kurs: Ödev takip, sınavlara hazırlık etüt programları. Kontenjan sınırlı, hemen bilgi alın!">
+<link rel="icon" type="image/png" href="yildiz-kurs.png">
+<link rel="apple-touch-icon" href="yildiz-kurs.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { 50:'#f0f3f9', 100:'#d9e0f0', 200:'#b3c1e0', 300:'#8da2d1', 400:'#6783c1', 500:'#4a6baf', 600:'#0b1f4f', 700:'#091a42', 800:'#071435', 900:'#050e28' },
+        cta: { 500:'#e63946', 600:'#d62839', 700:'#c1202e' },
+        accent: { 500:'#f77f00', 600:'#e67300' }
+      },
+      fontFamily: {
+        heading: ['Merriweather', 'Georgia', 'serif'],
+        body: ['Source Sans 3', 'Segoe UI', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Sans 3', sans-serif; line-height: 1.8; color: #1a1a2e; }
+  h1, h2, h3, h4 { font-family: 'Merriweather', Georgia, serif; }
+
+  /* Pulse animation for WhatsApp button */
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 1; }
+    80%, 100% { transform: scale(1.4); opacity: 0; }
+  }
+  .wa-pulse::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: #25d366;
+    animation: pulse-ring 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    z-index: -1;
+  }
+
+  /* CTA button glow */
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 8px rgba(230,57,70,0.4), 0 0 20px rgba(230,57,70,0.15); }
+    50% { box-shadow: 0 0 16px rgba(230,57,70,0.6), 0 0 40px rgba(230,57,70,0.25); }
+  }
+  .cta-glow { animation: glow 2.5s ease-in-out infinite; }
+
+  /* Hero gradient overlay */
+  .hero-gradient {
+    background: linear-gradient(135deg, #050e28 0%, #0b1f4f 40%, #091a42 70%, #050e28 100%);
+  }
+  .hero-pattern {
+    background-image:
+      radial-gradient(ellipse at 20% 50%, rgba(74,107,175,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(230,57,70,0.06) 0%, transparent 50%);
+  }
+
+  /* Scroll-triggered fade-in */
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* FAQ accordion */
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+  .faq-item.open .faq-answer { max-height: 600px; }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+  .faq-chevron { transition: transform 0.3s ease; }
+
+  /* Section divider */
+  .section-divider {
+    width: 60px; height: 4px; border-radius: 2px;
+    background: linear-gradient(90deg, #e63946, #f77f00);
+  }
+
+  /* Feature card hover */
+  .feature-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .feature-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(11,31,79,0.12); }
+
+  /* Stat counter */
+  .stat-box { border-bottom: 3px solid #e63946; }
+
+  /* Sticky nav shadow */
+  .nav-scrolled { box-shadow: 0 2px 20px rgba(5,14,40,0.15); }
+
+  /* Smooth link */
+  a { transition: color 0.2s ease; }
+
+  /* Selection color */
+  ::selection { background: #0b1f4f; color: #fff; }
+</style>
+
+<!-- JSON-LD: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://demetevleretutmerkezi.com.tr/#localbusiness",
+  "name": "Yıldız Kurs Etüt Merkezi",
+  "description": "Demetevler etüt merkezi: Yıldız Kurs ödev takip ve sınavlara hazırlık etüt sistemi. Demetevler en iyi etüt merkezleri arasında güvenilir adres.",
+  "url": "https://demetevleretutmerkezi.com.tr",
+  "telephone": "+903123460633",
+  "image": "https://demetevleretutmerkezi.com.tr/yildiz-kurs.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Aşağı Yahyalar Mahallesi, 994. Cadde, No:6/A",
+    "addressLocality": "Yenimahalle",
+    "addressRegion": "Ankara",
+    "postalCode": "06170",
+    "addressCountry": "TR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 39.9550,
+    "longitude": 32.8100
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "17:00"
+    }
+  ],
+  "priceRange": "₺₺",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Demetevler, Yenimahalle, Ankara"
+  },
+  "sameAs": [
+    "https://wa.me/905324790668"
+  ]
+}
+</script>
+
+<!-- JSON-LD: EducationalOrganization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": "https://demetevleretutmerkezi.com.tr/#eduorg",
+  "name": "Yıldız Kurs Etüt Merkezi",
+  "description": "Demetevler ortaokul etüt merkezi ve ödev takip programı. Sınavlara hazırlık etüt sistemi ile akademik başarıyı artıran güvenilir kurum.",
+  "url": "https://demetevleretutmerkezi.com.tr",
+  "telephone": "+903123460633",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Aşağı Yahyalar Mahallesi, 994. Cadde, No:6/A",
+    "addressLocality": "Yenimahalle",
+    "addressRegion": "Ankara",
+    "addressCountry": "TR"
+  }
+}
+</script>
+
+<!-- JSON-LD: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Demetevler'de Çocuğunuzun Ödev Stresi Bitsin, Aile Huzurunuz Geri Gelsin",
+  "description": "Demetevler etüt merkezi arayanlar için kapsamlı rehber. Yıldız Kurs etüt ve ödev takip sistemi ile çocuğunuzun akademik başarısını güvence altına alın.",
+  "author": {
+    "@type": "Organization",
+    "name": "Yıldız Kurs Etüt Merkezi"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yıldız Kurs Etüt Merkezi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://demetevleretutmerkezi.com.tr/yildiz-kurs.png"
+    }
+  },
+  "mainEntityOfPage": "https://demetevleretutmerkezi.com.tr",
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-09"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Demetevler etüt merkezi fiyatları ne kadar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yıldız Kurs etüt merkezi fiyatları; öğrencinin sınıf seviyesine, haftalık ders gün sayısına ve programa göre değişiklik göstermektedir. Detaylı ve güncel fiyat bilgisi için WhatsApp hattımızdan veya 0312 346 06 33 numaralı sabit hattımızdan ücretsiz danışmanlık alabilirsiniz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Etüt merkezinin çalışma saatleri nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yıldız Kurs hafta içi 10:00 - 20:00, Cumartesi günleri ise 10:00 - 17:00 saatleri arasında hizmet vermektedir. Öğrenciler okul çıkışı doğrudan merkeze gelerek etüt programına dahil olabilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hangi sınıf seviyelerine etüt hizmeti veriliyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yıldız Kurs Demetevler etüt sistemi, ilkokul 2. sınıftan 8. sınıfa kadar tüm seviyelerde ödev takip ve sınavlara hazırlık etüt hizmeti sunmaktadır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ödev takip sistemi tam olarak nasıl işliyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Öğrenci merkeze geldiğinde önce okul ödevleri uzman öğretmen gözetiminde tamamlanır. Ardından o gün okulda işlenen konuların tekrarı yapılır. Eksik konular tespit edilip birebir destekle kapatılır. Veliye günlük rapor iletilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Etüt merkezi Demetevler'e ne kadar yakın?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yıldız Kurs, Aşağı Yahyalar Mahallesi'nde yer almakta olup Demetevler'e yürüme mesafesindedir. Ana cadde üzerinde, toplu taşıma duraklarına çok yakın ve güvenli bir konumdadır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kontenjan sınırı var mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet, her sınıf seviyesi için sınırlı kontenjan uygulanmaktadır. Sınıflarda birebir ilgi sağlanabilmesi için öğrenci sayısı kasıtlı olarak düşük tutulmaktadır. Güncel kontenjan durumu için WhatsApp üzerinden bilgi alabilirsiniz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Deneme dersi veya ücretsiz görüşme imkânı var mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet, Yıldız Kurs ilk görüşmede ücretsiz veli-öğrenci danışmanlığı sunmaktadır. Böylece programımızı ve ortamımızı hiçbir taahhüt olmadan yerinde görebilirsiniz. Randevu için bizi arayın veya WhatsApp'tan yazın."
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="bg-white antialiased">
+
+<!-- ===================== NAVIGATION ===================== -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-navy-800/95 backdrop-blur-md">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-[72px]">
+      <a href="#hero" class="flex items-center gap-2 group" aria-label="Yıldız Kurs Ana Sayfa">
+        <img src="yildiz-kurs.png" alt="Yıldız Kurs Etüt Merkezi" class="h-9 w-9 rounded-lg object-contain bg-white/10 p-0.5" width="36" height="36" loading="eager">
+        <span class="text-white font-heading font-bold text-lg tracking-tight group-hover:text-accent-500 transition-colors">Yıldız Kurs</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-navy-200">
+        <a href="#sorun" class="hover:text-white transition-colors">Sorun</a>
+        <a href="#cozum" class="hover:text-white transition-colors">Çözüm</a>
+        <a href="#hakkimizda" class="hover:text-white transition-colors">Hakkımızda</a>
+        <a href="#sss" class="hover:text-white transition-colors">SSS</a>
+        <a href="#iletisim" class="hover:text-white transition-colors">İletişim</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="tel:+903123460633" class="hidden sm:flex items-center gap-1.5 text-sm text-navy-200 hover:text-white transition-colors" aria-label="Bizi arayın">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span>0312 346 06 33</span>
+        </a>
+        <a href="https://wa.me/905324790668" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-cta-500 hover:bg-cta-600 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors cta-glow" aria-label="WhatsApp ile bilgi alın">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Kontenjan Bilgisi Al
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header id="hero" class="hero-gradient hero-pattern relative overflow-hidden min-h-[92vh] flex items-center pt-20 pb-16">
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');" aria-hidden="true"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+    <div class="max-w-3xl">
+      <span class="inline-block bg-accent-500/20 text-accent-500 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide">Demetevler Etüt Merkezi Tavsiye</span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-heading font-black text-white leading-[1.2] mb-6">
+        Demetevler'de Çocuğunuzun <span class="text-cta-500">Ödev Stresi</span> Bitsin, Aile Huzurunuz <span class="text-accent-500">Geri Gelsin</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-navy-200 leading-relaxed mb-8 max-w-2xl">
+        Her akşam aynı kavga: "Ödevini yaptın mı?" Artık bu döngüyü kırmak elinizde. Demetevler etüt merkezleri arasında fark yaratan <strong class="text-white">Yıldız Kurs Ödev Takip ve Etüt Sistemi</strong> ile tanışın.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="https://wa.me/905324790668" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 bg-cta-500 hover:bg-cta-600 text-white text-lg font-bold px-8 py-4 rounded-xl transition-all cta-glow shadow-lg shadow-cta-500/25" aria-label="WhatsApp ile ücretsiz danışmanlık alın">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Ücretsiz Danışmanlık Al
+        </a>
+        <a href="tel:+903123460633" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white text-lg font-semibold px-8 py-4 rounded-xl transition-all border border-white/20" aria-label="Hemen arayın">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          0312 346 06 33
+        </a>
+      </div>
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mt-10 text-sm text-navy-300">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          Sınırlı Kontenjan
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          Ücretsiz İlk Görüşme
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          Demetevler'e Yürüme Mesafesi
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== STATS BAR ===================== -->
+<section class="bg-navy-600 py-8" aria-label="İstatistikler">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="stat-box pb-4">
+        <div class="text-3xl md:text-4xl font-heading font-black text-white">500<span class="text-accent-500">+</span></div>
+        <div class="text-sm text-navy-200 mt-1">Mutlu Öğrenci</div>
+      </div>
+      <div class="stat-box pb-4">
+        <div class="text-3xl md:text-4xl font-heading font-black text-white">12</div>
+        <div class="text-sm text-navy-200 mt-1">Yıllık Deneyim</div>
+      </div>
+      <div class="stat-box pb-4">
+        <div class="text-3xl md:text-4xl font-heading font-black text-white">%95</div>
+        <div class="text-sm text-navy-200 mt-1">Veli Memnuniyeti</div>
+      </div>
+      <div class="stat-box pb-4">
+        <div class="text-3xl md:text-4xl font-heading font-black text-white">15</div>
+        <div class="text-sm text-navy-200 mt-1">Kişilik Sınıflar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROBLEM & AGITATE ===================== -->
+<section id="sorun" class="py-16 md:py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-14 reveal">
+      <div class="section-divider mx-auto mb-6"></div>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-navy-800 leading-tight mb-4">
+        Çalışan Velilerin En Büyük Sorunu: <span class="text-cta-500">Okul Sonrası Kayıp Zamanlar</span>
+      </h2>
+      <p class="text-lg text-gray-600">Demetevler etüt merkezi araştırması yapıyorsanız, büyük ihtimalle aşağıdaki tabloya çok aşinasınız.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 lg:gap-14 items-start">
+      <div class="reveal">
+        <div class="bg-navy-50 rounded-2xl p-8 border border-navy-100">
+          <h3 class="text-xl font-heading font-bold text-navy-800 mb-5 flex items-center gap-2">
+            <svg class="w-6 h-6 text-cta-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+            Eve Geldiğinizde Karşılaştığınız Tablo
+          </h3>
+          <p class="text-gray-700 mb-4">
+            Sabah erkenden işe gidiyorsunuz. Trafikte, toplantılarda, mesailerde tüm gün koşturuyorsunuz. Akşam eve geldiğinizde tek istediğiniz bir parça huzur. Ama kapıdan adım atar atmaz karşınıza çıkan manzara hep aynı: çocuğunuz televizyon karşısında veya elinde tablet, ödevlere dokunulmamış, çanta olduğu gibi kapının kenarında duruyor.
+          </p>
+          <p class="text-gray-700 mb-4">
+            "Ödevini yaptın mı?" diye soruyorsunuz. Gelen cevap her zaman aynı: "Birazdan yapacağım." Ama o "birazdan" asla gelmiyor. Sonra siz sinirleniyorsunuz, çocuğunuz ağlıyor, arada kalan eşiniz yoruluyor. Güzel bir aile yemeği yerine gergin bir atmosfere dönüşen akşamlar… Bu hikaye size tanıdık geliyorsa, yalnız değilsiniz.
+          </p>
+          <p class="text-gray-700">
+            Demetevler'de yaşayan yüzlerce çalışan aile aynı kısır döngünün içinde. Bu sadece bir ödev meselesi değil; bu bir <strong class="text-navy-800">aile huzuru</strong> meselesi, bir <strong class="text-navy-800">çocuğun geleceği</strong> meselesidir.
+          </p>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay:0.15s">
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
+          <h3 class="text-xl font-heading font-bold text-navy-800 mb-5 flex items-center gap-2">
+            <svg class="w-6 h-6 text-accent-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            Evde Ders Çalışmak Neden İşe Yaramıyor?
+          </h3>
+          <p class="text-gray-700 mb-4">
+            Çoğu veli "Ama ben çocuğuma evde de bakabiliyorum" diye düşünür. Gerçek şu ki, ev ortamı bir çocuk için dünyanın en dikkat dağıtıcı yeridir. Televizyon açıktır, kardeşler gürültü yapar, telefondan bildirimler gelir. Çocuğun beyni sürekli "ders" ile "oyun" arasında gidip gelir ve hiçbirine tam odaklanamaz.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Araştırmalar, bir çocuğun dikkatinin dağıldıktan sonra tekrar odaklanmasının en az 15 dakika sürdüğünü gösteriyor. Evde her 5 dakikada bir dikkat dağılıyorsa, o çocuk aslında 2 saatte sadece 20 dakika verimli çalışmış oluyor. Sonuç? Düşük notlar, özgüven kaybı ve okuldan soğuma.
+          </p>
+          <p class="text-gray-700">
+            Üstelik siz de pedagog değilsiniz. Çocuğunuza matematik sorusu açıklamak, İngilizce gramer öğretmek, Fen Bilimleri deneylerini anlatmak sizin uzmanlık alanınız değil ve <strong class="text-navy-800">olmamalı</strong>. Siz ebeveynsiniz; çocuğunuzla kaliteli zaman geçirmek, sevginizi göstermek sizin göreviniz. Akademik takip ise profesyonellerin işi.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Emotional bridge -->
+    <div class="max-w-3xl mx-auto mt-14 reveal">
+      <div class="bg-gradient-to-r from-cta-500 to-accent-500 rounded-2xl p-8 md:p-10 text-white text-center">
+        <p class="text-xl md:text-2xl font-heading font-bold leading-relaxed mb-4">
+          "Ekran bağımlılığı, düşen notlar, azalan özgüven… Çocuğunuz her geçen gün biraz daha geride kalıyor ve bunu durdurmak sizin elinizde."
+        </p>
+        <p class="text-white/80 text-base">
+          Demetevler etüt merkezi tavsiye arayanlar için aşağıda gerçek bir çözüm var. Okumaya devam edin.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOLUTION (EDUCATE) ===================== -->
+<section id="cozum" class="py-16 md:py-24 bg-navy-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-14 reveal">
+      <div class="section-divider mx-auto mb-6"></div>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-navy-800 leading-tight mb-4">
+        Gerçek Bir Etüt Sistemi <span class="text-cta-500">Nasıl Olmalı?</span>
+      </h2>
+      <p class="text-lg text-gray-600">
+        Demetevler en iyi etüt merkezi arayışınızda sadece "bir masa ve sandalye" yetmez. İşte profesyonel bir Demetevler ortaokul etüt merkezi sisteminde olması gereken 6 temel unsur:
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Card 1 -->
+      <div class="feature-card bg-white rounded-2xl p-7 shadow-md border border-gray-100 reveal">
+        <div class="w-12 h-12 rounded-xl bg-navy-600 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+        </div>
+        <h3 class="text-lg font-heading font-bold text-navy-800 mb-3">Günlük Ödev Takip Sistemi</h3>
+        <p class="text-gray-600 text-[15px]">
+          Öğrenci merkeze geldiği anda okul ödevleri tek tek kontrol edilir. Her ödeve uzman eğitimci eşlik eder; çocuğunuz "ödevimi yaptım ama anlamadım" demez. Ödevler anlaşılarak, öğrenilerek bitirilir.
+        </p>
+      </div>
+      <!-- Card 2 -->
+      <div class="feature-card bg-white rounded-2xl p-7 shadow-md border border-gray-100 reveal" style="transition-delay:0.08s">
+        <div class="w-12 h-12 rounded-xl bg-navy-600 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        <h3 class="text-lg font-heading font-bold text-navy-800 mb-3">Konu Tekrarı ve Pekiştirme</h3>
+        <p class="text-gray-600 text-[15px]">
+          Ödevler bittikten sonra o gün okulda işlenen konuların yapılandırılmış tekrarı yapılır. Eksik kalan, anlaşılmayan konular anında tespit edilip kapatılır. Böylece bilgi boşlukları birikmez.
+        </p>
+      </div>
+      <!-- Card 3 -->
+      <div class="feature-card bg-white rounded-2xl p-7 shadow-md border border-gray-100 reveal" style="transition-delay:0.16s">
+        <div class="w-12 h-12 rounded-xl bg-navy-600 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 class="text-lg font-heading font-bold text-navy-800 mb-3">Küçük Gruplar, Kişisel İlgi</h3>
+        <p class="text-gray-600 text-[15px]">
+          Demetevler etüt merkezleri arasındaki en önemli fark budur: sınıf mevcutları kasıtlı olarak düşük tutulur. Her öğrenci birebir ilgiyi hak eder ve bu ilgiyi alır. Kalabalıkta kaybolma riski sıfırdır.
+        </p>
+      </div>
+      <!-- Card 4 -->
+      <div class="feature-card bg-white rounded-2xl p-7 shadow-md border border-gray-100 reveal">
+        <div class="w-12 h-12 rounded-xl bg-navy-600 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="text-lg font-heading font-bold text-navy-800 mb-3">Güvenli ve Kontrollü Ortam</h3>
+        <p class="text-gray-600 text-[15px]">
+          Telefon ve tablet gibi dikkat dağıtıcı cihazlar etüt saatlerinde toplanır. Çocuğunuz ekrandan uzak, tamamen derse odaklanmış bir ortamda çalışır. Veli olarak ekran bağımlılığı endişeniz ortadan kalkar.
+        </p>
+      </div>
+      <!-- Card 5 -->
+      <div class="feature-card bg-white rounded-2xl p-7 shadow-md border border-gray-100 reveal" style="transition-delay:0.08s">
+        <div class="w-12 h-12 rounded-xl bg-navy-600 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3 class="text-lg font-heading font-bold text-navy-800 mb-3">Sınavlara Hazırlık Etüdü</h3>
+        <p class="text-gray-600 text-[15px]">
+          Yazılı ve sınav dönemlerinde özel hazırlık programları devreye girer. Soru çözüm kampları, deneme sınavları ve birebir eksik tamamlama çalışmalarıyla öğrencinin notu kademeli olarak yükselir.
+        </p>
+      </div>
+      <!-- Card 6 -->
+      <div class="feature-card bg-white rounded-2xl p-7 shadow-md border border-gray-100 reveal" style="transition-delay:0.16s">
+        <div class="w-12 h-12 rounded-xl bg-navy-600 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        </div>
+        <h3 class="text-lg font-heading font-bold text-navy-800 mb-3">Veliye Düzenli Geri Bildirim</h3>
+        <p class="text-gray-600 text-[15px]">
+          Çocuğunuzun o günkü performansı, tamamladığı ödevler ve eksik kaldığı konular hakkında düzenli olarak bilgilendirilirsiniz. Artık "bugün ne yaptın?" sorusuna kendi cevabınız olur.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BRAND INTRO (SOLVE) ===================== -->
+<section id="hakkimizda" class="py-16 md:py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-14 reveal">
+      <div class="section-divider mx-auto mb-6"></div>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-navy-800 leading-tight mb-4">
+        Demetevler Ödev Takip ve Etüt Sisteminde Tek Adres: <span class="text-cta-500">Yıldız Kurs</span>
+      </h2>
+      <p class="text-lg text-gray-600">
+        Demetevler etüt merkezi tavsiye listenizde bizi ilk sıraya koymanız için güçlü sebeplerimiz var.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-10 items-center">
+      <!-- Image Column -->
+      <div class="lg:col-span-2 reveal">
+        <div class="relative">
+          <div class="absolute -inset-3 bg-gradient-to-br from-navy-600 to-cta-500 rounded-2xl opacity-10 blur-xl"></div>
+          <div class="relative bg-navy-50 rounded-2xl p-6 border border-navy-100 flex items-center justify-center min-h-[320px]">
+            <img src="yildiz-kurs.png" alt="Yıldız Kurs Etüt Merkezi - Demetevler en iyi etüt merkezi" class="max-w-full h-auto rounded-xl shadow-lg" width="400" height="300" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <!-- Text Column -->
+      <div class="lg:col-span-3 reveal" style="transition-delay:0.12s">
+        <p class="text-gray-700 mb-5 text-[17px]">
+          <strong class="text-navy-800">Yıldız Kurs</strong>, Demetevler ve çevresindeki ailelere 12 yılı aşkın süredir hizmet veren, ödev takip ve sınavlara hazırlık etüt alanında uzmanlaşmış bir kurumdur. Yıldız Kurs Demetevler etüt sistemi, klasik "çocuğu bir odaya koyup kendi haline bırakma" anlayışından tamamen farklıdır.
+        </p>
+        <p class="text-gray-700 mb-5 text-[17px]">
+          Burada her öğrenci bireysel olarak takip edilir. Okul sonrası merkeze gelen öğrencinin önce günlük ödevleri uzman eğitimci gözetiminde tamamlanır. Ardından o gün okulda işlenen konuların tekrarı yapılır. Anlayamadığı noktalar hemen tespit edilip birebir açıklanır. Veli olarak siz akşam eve geldiğinizde ödevler bitmiş, konular tekrar edilmiş, çocuğunuz gülümsüyor olur.
+        </p>
+        <p class="text-gray-700 mb-5 text-[17px]">
+          Demetevler ödev takip merkezi olarak Yıldız Kurs'un farkı, sadece ödev yaptırmak değil, çocuğun <strong class="text-navy-800">öğrenmeyi öğrenmesini</strong> sağlamaktır. Düzenli çalışma alışkanlığı kazanan, dikkatini toplamayı bilen, sınavlara planlı hazırlanan bir öğrenci profili oluşturulur. Bu alışkanlıklar sadece etüt saatlerinde değil, hayatın her alanında çocuğunuzun başarısını artırır.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <strong class="text-navy-800 text-sm">Zamanında Biten Ödevler</strong>
+              <p class="text-gray-500 text-sm">Eve ödev stresi taşınmaz.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <strong class="text-navy-800 text-sm">Günlük Konu Tekrarı</strong>
+              <p class="text-gray-500 text-sm">Bilgi boşlukları kapanır.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <strong class="text-navy-800 text-sm">Ekransız Ortam</strong>
+              <p class="text-gray-500 text-sm">Tablet ve telefon toplanır.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <strong class="text-navy-800 text-sm">Güvenli Konum</strong>
+              <p class="text-gray-500 text-sm">Demetevler'e yürüme mesafesi.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <a href="https://wa.me/905324790668" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-cta-500 hover:bg-cta-600 text-white font-bold px-7 py-3.5 rounded-xl transition-all cta-glow shadow-lg shadow-cta-500/25 text-[17px]" aria-label="WhatsApp ile kontenjan bilgisi alın">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Kontenjan Bilgisi Al
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOCIAL PROOF / TESTIMONIAL STRIP ===================== -->
+<section class="py-14 bg-navy-600" aria-label="Veli görüşleri">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-navy-700/60 rounded-2xl p-7 border border-navy-500/30 reveal">
+        <div class="flex items-center gap-1 mb-3" aria-label="5 yıldız">
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="text-navy-100 italic text-[15px] mb-4">"Artık akşamları kavga etmiyoruz. Kızım merkeze gitmeye bayılıyor, ödevler hazır geliyor. Aile olarak çok rahatladık. Demetevler'deki en iyi kararımız Yıldız Kurs oldu."</p>
+        <p class="text-navy-300 text-sm font-semibold">— Ayşe K., 6. Sınıf Velisi</p>
+      </div>
+      <div class="bg-navy-700/60 rounded-2xl p-7 border border-navy-500/30 reveal" style="transition-delay:0.1s">
+        <div class="flex items-center gap-1 mb-3" aria-label="5 yıldız">
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="text-navy-100 italic text-[15px] mb-4">"Oğlum önceden hiç çalışmak istemiyordu. Yıldız Kurs'a başladıktan 2 ay sonra matematik notunu 45'ten 82'ye çıkardı. Hem çocuğum hem biz çok mutluyuz. Demetevler etüt merkezleri arasında kesinlikle tavsiye ederim."</p>
+        <p class="text-navy-300 text-sm font-semibold">— Mehmet T., 7. Sınıf Velisi</p>
+      </div>
+      <div class="bg-navy-700/60 rounded-2xl p-7 border border-navy-500/30 reveal" style="transition-delay:0.2s">
+        <div class="flex items-center gap-1 mb-3" aria-label="5 yıldız">
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="text-navy-100 italic text-[15px] mb-4">"İkiz çocuklarım için güvenli ve disiplinli bir ortam arıyordum. Yıldız Kurs tam aradığım yer. Ekranlardan uzak, odaklanmış çalışma ortamı harika. Demetevler etüt merkezi olarak bence en iyisi."</p>
+        <p class="text-navy-300 text-sm font-semibold">— Fatma S., 5. Sınıf Velisi</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA BAND ===================== -->
+<section class="py-14 bg-gradient-to-r from-cta-500 to-cta-700 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 20 20&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot; fill-rule=&quot;evenodd&quot;%3E%3Ccircle cx=&quot;3&quot; cy=&quot;3&quot; r=&quot;1.5&quot;/%3E%3C/g%3E%3C/svg%3E');" aria-hidden="true"></div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <h2 class="text-2xl sm:text-3xl font-heading font-bold text-white mb-4">Kontenjan Sınırlıdır — Yerinizi Hemen Ayırtın</h2>
+    <p class="text-white/85 text-lg mb-8 max-w-2xl mx-auto">Demetevler etüt merkezi fiyatları ve program detayları hakkında ücretsiz bilgi almak için şimdi WhatsApp'tan yazın. İlk görüşme tamamen ücretsizdir.</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="https://wa.me/905324790668" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 bg-white text-cta-600 hover:bg-navy-50 text-lg font-bold px-8 py-4 rounded-xl transition-all shadow-lg" aria-label="WhatsApp ile hemen yazın">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp'tan Ücretsiz Danış
+      </a>
+      <a href="tel:+903123460633" class="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg font-semibold px-8 py-4 rounded-xl transition-all" aria-label="Hemen arayın">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        0312 346 06 33
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="sss" class="py-16 md:py-24 bg-navy-50">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <div class="section-divider mx-auto mb-6"></div>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-navy-800 leading-tight mb-4">
+        Sıkça Sorulan Sorular
+      </h2>
+      <p class="text-lg text-gray-600">Demetevler etüt merkezi hakkında merak ettikleriniz:</p>
+    </div>
+
+    <div class="space-y-4 reveal">
+      <!-- FAQ 1 -->
+      <div class="faq-item bg-white rounded-xl border border-gray-200 shadow-sm">
+        <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-heading font-bold text-navy-800 text-[17px] pr-4">Demetevler etüt merkezi fiyatları ne kadar?</span>
+          <svg class="faq-chevron w-5 h-5 text-navy-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <div class="pb-5 text-gray-600">
+            Yıldız Kurs etüt merkezi fiyatları; öğrencinin sınıf seviyesine, haftalık ders gün sayısına ve tercih edilen programa göre değişiklik göstermektedir. Her aileye özel, bütçeye uygun esnek ödeme planları sunulmaktadır. Detaylı ve güncel fiyat bilgisi için <a href="https://wa.me/905324790668" target="_blank" rel="noopener noreferrer" class="text-cta-500 font-semibold underline">WhatsApp hattımızdan</a> veya <a href="tel:+903123460633" class="text-cta-500 font-semibold underline">0312 346 06 33</a> numaralı sabit hattımızdan ücretsiz danışmanlık alabilirsiniz.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 2 -->
+      <div class="faq-item bg-white rounded-xl border border-gray-200 shadow-sm">
+        <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-heading font-bold text-navy-800 text-[17px] pr-4">Etüt merkezinin çalışma saatleri nedir?</span>
+          <svg class="faq-chevron w-5 h-5 text-navy-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <div class="pb-5 text-gray-600">
+            Yıldız Kurs hafta içi 10:00 - 20:00, Cumartesi günleri ise 10:00 - 17:00 saatleri arasında hizmet vermektedir. Öğrenciler okul çıkışı doğrudan merkeze gelerek ödev takip ve etüt programına dahil olabilir. Pazar günleri merkezimiz kapalıdır.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 3 -->
+      <div class="faq-item bg-white rounded-xl border border-gray-200 shadow-sm">
+        <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-heading font-bold text-navy-800 text-[17px] pr-4">Hangi sınıf seviyelerine etüt hizmeti veriliyor?</span>
+          <svg class="faq-chevron w-5 h-5 text-navy-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <div class="pb-5 text-gray-600">
+            Yıldız Kurs Demetevler etüt sistemi, ilkokul 2. sınıftan 8. sınıfa kadar tüm seviyelerde ödev takip ve sınavlara hazırlık etüt hizmeti sunmaktadır. Her sınıf seviyesi için özel olarak hazırlanmış müfredat takip programları uygulanmaktadır. Demetevler ortaokul etüt merkezi olarak özellikle 5-8. sınıf aralığında yoğun talep almaktayız.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 4 -->
+      <div class="faq-item bg-white rounded-xl border border-gray-200 shadow-sm">
+        <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-heading font-bold text-navy-800 text-[17px] pr-4">Ödev takip sistemi tam olarak nasıl işliyor?</span>
+          <svg class="faq-chevron w-5 h-5 text-navy-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <div class="pb-5 text-gray-600">
+            Öğrenci merkeze geldiğinde önce okul ödevleri uzman eğitimci gözetiminde tek tek tamamlanır. Çocuğunuz her soruyu çözerken yanında bir rehber bulur. Ödevler bittikten sonra o gün okulda işlenen konuların yapılandırılmış tekrarı yapılır. Eksik konular tespit edilip birebir destekle kapatılır. Gün sonunda veliye çocuğun o günkü performansı hakkında bilgi iletilir. Bu Demetevler ödev takip merkezi sistemi sayesinde siz akşam eve geldiğinizde ödevler bitmiş, konular çalışılmış olur.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 5 -->
+      <div class="faq-item bg-white rounded-xl border border-gray-200 shadow-sm">
+        <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-heading font-bold text-navy-800 text-[17px] pr-4">Etüt merkezi Demetevler'e ne kadar yakın?</span>
+          <svg class="faq-chevron w-5 h-5 text-navy-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <div class="pb-5 text-gray-600">
+            Yıldız Kurs, <a href="https://maps.google.com/maps?q=A%C5%9Fa%C4%9F%C4%B1%20Yahyalar%20Mahallesi,%20994.%20Cadde,%20No:6/A,%20Yenimahalle/Ankara&t=&z=15&ie=UTF8&iwloc=&output=embed" target="_blank" rel="noopener noreferrer" class="text-cta-500 font-semibold underline">Aşağı Yahyalar Mahallesi, 994. Cadde, No:6/A, Yenimahalle/Ankara</a> adresinde yer almakta olup Demetevler'e yürüme mesafesindedir. Ana cadde üzerinde, toplu taşıma duraklarına çok yakın ve çevresindeki en güvenli lokasyonlardan birindedir. Çocuğunuz rahatlıkla yürüyerek veya kısa bir servis ile ulaşabilir.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 6 -->
+      <div class="faq-item bg-white rounded-xl border border-gray-200 shadow-sm">
+        <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-heading font-bold text-navy-800 text-[17px] pr-4">Kontenjan sınırı var mı?</span>
+          <svg class="faq-chevron w-5 h-5 text-navy-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <div class="pb-5 text-gray-600">
+            Evet, Yıldız Kurs'ta her sınıf seviyesi için sınırlı kontenjan uygulanmaktadır. Sınıflarda birebir ilgi sağlanabilmesi için öğrenci sayısı kasıtlı olarak düşük tutulmaktadır (maksimum 15 kişi). Bu sayede her öğrenci yeterli ilgiyi alır. Güncel kontenjan durumu için <a href="https://wa.me/905324790668" target="_blank" rel="noopener noreferrer" class="text-cta-500 font-semibold underline">WhatsApp üzerinden</a> bilgi alabilirsiniz.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 7 -->
+      <div class="faq-item bg-white rounded-xl border border-gray-200 shadow-sm">
+        <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-heading font-bold text-navy-800 text-[17px] pr-4">Deneme dersi veya ücretsiz görüşme imkânı var mı?</span>
+          <svg class="faq-chevron w-5 h-5 text-navy-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <div class="pb-5 text-gray-600">
+            Evet, Yıldız Kurs ilk görüşmede ücretsiz veli-öğrenci danışmanlığı sunmaktadır. Bu görüşmede çocuğunuzun akademik durumu değerlendirilir, etüt programı hakkında bilgi verilir ve tüm sorularınız yanıtlanır. Hiçbir taahhüt olmadan merkezimizi yerinde görebilirsiniz. Randevu için bizi <a href="tel:+903123460633" class="text-cta-500 font-semibold underline">0312 346 06 33</a>'den arayabilir veya <a href="https://wa.me/905324790668" target="_blank" rel="noopener noreferrer" class="text-cta-500 font-semibold underline">WhatsApp'tan</a> yazabilirsiniz.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="iletisim" class="bg-navy-900 pt-14 pb-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-10 mb-10">
+      <!-- Contact Info -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <img src="yildiz-kurs.png" alt="Yıldız Kurs Etüt Merkezi" class="h-10 w-10 rounded-lg object-contain bg-white/10 p-0.5" width="40" height="40" loading="lazy">
+          <span class="text-white font-heading font-bold text-xl">Yıldız Kurs</span>
+        </div>
+        <p class="text-navy-300 mb-6 max-w-md text-[15px]">
+          Demetevler etüt merkezi arayışınızda güvenilir adresiniz. Ödev takip, sınavlara hazırlık etüt programları ve birebir akademik destek ile çocuğunuzun başarısı için buradayız.
+        </p>
+        <div class="space-y-4">
+          <a href="https://maps.google.com/maps?q=A%C5%9Fa%C4%9F%C4%B1%20Yahyalar%20Mahallesi,%20994.%20Cadde,%20No:6/A,%20Yenimahalle/Ankara&t=&z=15&ie=UTF8&iwloc=&output=embed" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 text-navy-200 hover:text-white transition-colors group">
+            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span class="text-[15px]">Aşağı Yahyalar Mahallesi, 994. Cadde, No:6/A, Yenimahalle/Ankara <span class="text-accent-500 text-xs">(Demetevler'e yürüme mesafesi)</span></span>
+          </a>
+          <a href="tel:+903123460633" class="flex items-center gap-3 text-navy-200 hover:text-white transition-colors">
+            <svg class="w-5 h-5 flex-shrink-0 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <span class="text-[15px] font-medium">0312 346 06 33</span>
+          </a>
+          <a href="https://wa.me/905324790668" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-navy-200 hover:text-white transition-colors">
+            <svg class="w-5 h-5 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span class="text-[15px] font-medium">WhatsApp ile Yazın</span>
+          </a>
+        </div>
+      </div>
+      <!-- Map -->
+      <div>
+        <div class="rounded-xl overflow-hidden border border-navy-700 shadow-lg h-[280px]">
+          <iframe
+            src="https://maps.google.com/maps?q=A%C5%9Fa%C4%9F%C4%B1%20Yahyalar%20Mahallesi,%20994.%20Cadde,%20No:6/A,%20Yenimahalle/Ankara&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Yıldız Kurs Etüt Merkezi Harita Konumu"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-navy-700 pt-8 text-center">
+      <p class="text-navy-400 text-sm mb-2">Bu rehber <strong class="text-navy-300">Yıldız Kurs</strong> katkılarıyla hazırlanmıştır.</p>
+      <p class="text-navy-500 text-xs">&copy; 2026 Yıldız Kurs Etüt Merkezi — Demetevler, Yenimahalle/Ankara. Tüm hakları saklıdır.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== FIXED WHATSAPP BUTTON (MOBILE) ===================== -->
+<a href="https://wa.me/905324790668" target="_blank" rel="noopener noreferrer" class="wa-pulse fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25d366] rounded-full flex items-center justify-center shadow-lg shadow-green-900/30 hover:scale-110 transition-transform md:w-16 md:h-16" aria-label="WhatsApp ile iletişime geçin">
+  <svg class="w-7 h-7 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const st = window.scrollY;
+  if (st > 50) {
+    navbar.classList.add('nav-scrolled');
+  } else {
+    navbar.classList.remove('nav-scrolled');
+  }
+  lastScroll = st;
+}, { passive: true });
+
+// Scroll reveal
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealElements.forEach(el => revealObserver.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(fi => {
+      fi.classList.remove('open');
+      fi.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
+    });
+    // Toggle current
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = 80;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>
